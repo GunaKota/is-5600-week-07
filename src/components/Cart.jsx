@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import PurchaseForm from './PurchaseForm';
+import {useCart} from '../state/CartProvider'
 
 const Cart = () => {
   // TODO - get cart items from context
+  const {cartItems, removeFromCart, getCartTotal, updateItemQuantity} = useCart();
   const cartItems = [];
   const removeFromCart = () => {};
   const updateItemQuantity = () => {};
